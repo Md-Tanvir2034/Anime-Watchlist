@@ -223,22 +223,25 @@ public class MainWindow extends JFrame implements ActionListener {
             }
             }
 
-    else if(e.getSource() == showButton){
-        if (watchlist.getWatchlist().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Watchlist is empty.", "Info", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            updateDisplayArea();
-        }
-    }
-
-    else if(e.getSource() == saveButton){
-            if (watchlist.getWatchlist().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Watchlist is empty. Nothing to save.", "Warning", JOptionPane.WARNING_MESSAGE);
+           else if(e.getSource() == showButton){
+             if (watchlist.getWatchlist().isEmpty()) {  
+                 JOptionPane.showMessageDialog(this, "Watchlist is empty.", "Info", JOptionPane.INFORMATION_MESSAGE);
             } else {
-            FileIO.saveToFile(watchlist);
-            JOptionPane.showMessageDialog(this, "Watchlist saved to file.", "Success", JOptionPane.INFORMATION_MESSAGE);
+                updateDisplayArea();
             }
-            }
+          }
+
+           else if(e.getSource() == saveButton){
+            
+
+                if (titleField.getText().isEmpty() || genreField.getText().isEmpty() || statusField.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please fill in all fields before saving.", "Warning", JOptionPane.WARNING_MESSAGE);
+                
+                } else {
+                FileIO.saveToFile(watchlist);
+                JOptionPane.showMessageDialog(this, "Watchlist saved to file.", "Success", JOptionPane.INFORMATION_MESSAGE);
+                }
+                }
 
             else if(e.getSource() == clearButton){
                 titleField.setText("");
