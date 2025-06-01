@@ -3,4 +3,4 @@ onepiece,adventure,1122,ongoing,8.5
 AOT,action,87,finished,8.0
 Boruto,action,220,finished,7.0
 Berserk,Dark Fantasy,25,Ongoing,9.8
-fuck,hentai,2545,ongoing,5.0
+Sohan,nerd,5,alive,1.0

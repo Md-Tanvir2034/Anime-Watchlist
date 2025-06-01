@@ -2,6 +2,7 @@ package Entity;
 public class Watchlist {
     private final int maxSize = 100;
     private Anime[] list = new Anime[maxSize];
+
     
     
 
@@ -25,6 +26,7 @@ public class Watchlist {
     
     
     if (firstNullIndex != -1) {
+        
         list[firstNullIndex] = anime;
         System.out.println("Anime added to watchlist.");
         
